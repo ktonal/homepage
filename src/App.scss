@@ -1,0 +1,65 @@
+.App {
+  margin: 0 2vw;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 8%;
+}
+
+.main-container {
+  display: flex;
+  justify-items: center;
+  height: max-content;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 25vw;
+  //margin: 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .motto {
+    align-self: center;
+    //font-size: x-small;
+  }
+
+  .App-logo {
+    width: 30%;
+    height: auto;
+    margin: 16%;
+  }
+
+  .link {
+    font-size: x-large;
+    height: 20%;
+    justify-self: center;
+    margin: auto 16%;
+  }
+}
+
+.content-container {
+  width: 100%;
+  margin: 3% 3% 3% 25vw;
+  //max-width: 50vw;
+  text-align: justify;
+
+  .music-grid {
+    .embed-player {
+      //width: 50%;
+      padding: 2rem 2rem 2rem 0;
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 10px;
+}
