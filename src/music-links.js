@@ -8,19 +8,19 @@ export const links = [
         "description": "Jargon der Egitnetlichrtagtkit"
     },
     {
-        "url": "https://soundcloud.com/k-tonal/cathy-berberian-berio-sequenza-iii-4",
+        "url": "https://soundcloud.com/ktonal/cathy-berberian-berio-sequenza-iii-4",
         "description": "Cathy Berberian - Berio Sequenza III"
     },
     {
-        "url": "https://soundcloud.com/k-tonal/cathy-berberian-sequenza-berio-2",
+        "url": "https://soundcloud.com/ktonal/cathy-berberian-sequenza-berio-2",
         "description": "Cathy Berberian - Berio Sequenza III"
     },
     {
-        "url": "https://soundcloud.com/k-tonal/bruckner-symphony-no-8-2-2",
+        "url": "https://soundcloud.com/ktonal/bruckner-symphony-no-8-2-2",
         "description": "Bruckner Symphony No. 8, 2nd Movement"
     },
     {
-        "url": "https://soundcloud.com/k-tonal/bruckner-symphony-no-8-2-satz",
+        "url": "https://soundcloud.com/ktonal/bruckner-symphony-no-8-2-satz",
         "description": "Bruckner Symphony No. 8, 2nd Movement"
     }
 

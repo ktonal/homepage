@@ -60,7 +60,7 @@ $k-black: #fafafaee;
 .content-container {
   max-width: 80vw;
   margin: 0 5vw 5vh $sidebar-width;
-  min-height: 77vh;
+  min-height: 70vh;
   text-align: justify;
   padding: $header-height 2em 0 2em;
   //background: #fafafa22;
@@ -92,4 +92,12 @@ $k-black: #fafafaee;
 .footer {
   margin: 0 0 0 $sidebar-width;
   padding: 0 2em;
+
+  .icon-div {
+    text-align: center;
+
+    .icons a {
+      padding: 20px 10px;
+    }
+  }
 }

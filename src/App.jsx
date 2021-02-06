@@ -3,6 +3,8 @@ import {
     BrowserRouter as Router, Switch, Route, Link
 } from 'react-router-dom';
 import ReactPlayer from "react-player";
+import { IconContext } from 'react-icons';
+import { FaGithub, FaFacebook, FaSoundcloud, FaYoutube } from 'react-icons/fa';
 
 import './App.scss';
 import {links} from './music-links';
@@ -34,24 +36,21 @@ function App() {
                     <div className={"content-container"}>
                         <Route path={"/what-the-k"}>
                             <div>
+
                                 <h2>What's ktonal?</h2>
                                 <p>ktonal is a group of composers working on different aspects of AI-powered
                                     music-making.</p>
-                                <p>We develop open-source code, write music pieces and we love to reflect the two by
-                                    putting our thoughts down in writings.</p>
-                                <p>Generally, we're motivated by the idea that technological and aesthetical
-                                    developments should always be concerned by each other and
-                                    we find great pleasure exploring this relationship within our musical
-                                    praxis.</p>
+                                <p>We develop open-source code, write music pieces and occasionally put down some
+                                    thoughts in
+                                    writings.</p>
+
                                 <h2>How do you pronounce "ktonal"?</h2>
-                                <p>Spell the "k" and then say "tonal" ;)</p>
-                                <h2>Why "k"tonal?</h2>
-                                <p>
-                                    The "k" of ktonal comes from the german word for AI : "Künstlische Intelligenz".
-                                    Thus ktonal stands for AI-made music but it is also a wink to "atonal music",
-                                    this thing a certain Schönberg claims to have invented and that enjoyed quite a
-                                    success
-                                    in the classical western tradition of the 20th century...
+                                <p>Spell the "k", then say "tonal" 😉</p>
+
+                                <h2>Why "k" - tonal?</h2>
+                                <p>The "k" of ktonal comes from the german word for AI : "Künstlische Intelligenz".</p>
+                                <p>Thus, ktonal stands for AI-made music reaching beyond the traditional dichotomies
+                                    of "tonal" and "atonal" musics.
                                 </p>
 
                             </div>
@@ -63,19 +62,19 @@ function App() {
                                 <p>We open-source all the code we develop.</p>
 
                                 <h2>Repositories</h2>
-                                <section>You'll find all repos on our <a href={"https://github.com/k-tonal"}>GitHub
+                                <section>You'll find all repos on our <a href={"https://github.com/ktonal"}>GitHub
                                     page</a>.
-                                    <h3><a href={"https://github.com/k-tonal/mimikit"}><code>mimikit</code></a></h3>
+                                    <h3><a href={"https://github.com/ktonal/mimikit"}><code>mimikit</code></a></h3>
                                     <p>python package for making deep generative models with your own
                                         audio files.</p>
 
                                     <h3><a
-                                        href={"https://github.com/k-tonal/mimikit-notebooks"}>the <code>mimikit-notebooks</code></a>
+                                        href={"https://github.com/ktonal/mimikit-notebooks"}>the <code>mimikit-notebooks</code></a>
                                     </h3>
                                     <p>set of plug & play notebooks to use mimikit in colab.</p>
-                                    <h3><a href={"https://github.com/k-tonal"}><code>axx</code></a></h3>
+                                    <h3><a href={"https://github.com/ktonal"}><code>axx</code></a></h3>
                                     <p>webapp still in early development to visualize and listen to the
-                                            models made with <code>mimikit</code>.</p>
+                                        models made with <code>mimikit</code>.</p>
                                 </section>
                                 <h2>Documentation 🔍</h2>
                                 <section>
@@ -88,7 +87,7 @@ function App() {
                                 <h2>Music 🎶</h2>
                                 <p>You'll find more examples on our <a
                                     href={"https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw"}>YouTube</a> and <a
-                                    href={"https://soundcloud.com/k-tonal"}>SoundCloud</a> channels.</p>
+                                    href={"https://soundcloud.com/ktonal"}>SoundCloud</a> channels.</p>
                                 <h2>Highlights</h2>
                                 <div className={"music-grid"}>
                                     {links.map(link => {
@@ -143,7 +142,35 @@ function App() {
             </Router>
             {/*</div>*/}
             <footer className={"footer"}>
-                {"Copyright 2021 k-tonal"}
+                <div className={"icon-div"}>
+                    <p>Find us on</p>
+                    <div className={"icons"}>
+                    <a href="https://facebook.com/katonal" target="_blank" rel="noreferrer">
+                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                            <FaFacebook/>
+                        </IconContext.Provider>
+                    </a>
+
+                    <a href="https://github.com/ktonal" target="_blank" rel="noreferrer">
+                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                            <FaGithub/>
+                        </IconContext.Provider>
+                    </a>
+
+                    <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                            <FaYoutube/>
+                        </IconContext.Provider>
+                    </a>
+
+                    <a href="https://soundcloud.com/ktonal" target="_blank" rel="noreferrer">
+                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                            <FaSoundcloud/>
+                        </IconContext.Provider>
+                    </a>
+                        </div>
+                </div>
+                <p>&#169; {new Date().getFullYear() + " ktonal"}</p>
             </footer>
         </div>
     )
