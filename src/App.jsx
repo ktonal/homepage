@@ -27,9 +27,9 @@ function App() {
                         <Link to={"/what-the-k"} className={"link"}>What the k?</Link>
                         <Link to={"/code"} className={"link"}>Code</Link>
                         <Link to={"/music"} className={"link"}>Music</Link>
-                        <Link to={"/writings"} className={"link"}>Writings</Link>
-                        <Link to={"/project-gallery"} className={"link"}>Projects Gallery</Link>
-                        <Link to={"/members"} className={"link"}>Members</Link>
+                        {/*<Link to={"/writings"} className={"link"}>Writings</Link>*/}
+                        {/*<Link to={"/project-gallery"} className={"link"}>Projects Gallery</Link>*/}
+                        {/*<Link to={"/members"} className={"link"}>Members</Link>*/}
                     </div>
                 </div>
                 <Switch>
@@ -38,21 +38,38 @@ function App() {
                             <div>
 
                                 <h2>What's ktonal?</h2>
-                                <p>ktonal is a group of composers working on different aspects of AI-powered
-                                    music-making.</p>
-                                <p>We develop open-source code, write music pieces and occasionally put down some
-                                    thoughts in
-                                    writings.</p>
+                                <p>ktonal is a group of composers working on AI-powered
+                                    sound generation.</p>
+                                <p>We code and compose music.</p>
+
+                                <h2>What's our deal?</h2>
+                                <p>Current AI/Deep-Learning systems for sounds and music are huge, expensive and hard to personalize.</p>
+                                <p>That sucks...</p>
+                                <p>We provide accessible tools for making unheard music and sound art.</p>
 
                                 <h2>How do you pronounce "ktonal"?</h2>
-                                <p>Spell the "k", then say "tonal" 😉</p>
+                                <p>Spell the "k", then say "tonal".</p>
+                                <p>The "k" stands for the german word for AI : "Künstliche Intelligenz".</p>
 
-                                <h2>Why "k" - tonal?</h2>
-                                <p>The "k" of ktonal comes from the german word for AI : "Künstlische Intelligenz".</p>
-                                <p>Thus, ktonal stands for AI-made music reaching beyond the traditional dichotomies
-                                    of "tonal" and "atonal" musics.
-                                </p>
+                                <h2>Who is ktonal?</h2>
+                                <div className={"members-list"}>
+                                    <p>
+                                        Antoine Daurat
+                                    </p>
+                                    <p>
+                                        Björn Erlach
+                                    </p>
+                                    <p>
+                                        Roberto Fausti
+                                    </p>
+                                    <p>
+                                        Genoël von Lilienstern
+                                    </p>
+                                    <p>
+                                        Dohi Moon
+                                    </p>
 
+                                </div>
                             </div>
                         </Route>
                         <Route path={"/code"}>
@@ -76,7 +93,7 @@ function App() {
                                     <p>webapp still in early development to visualize and listen to the
                                         models made with <code>mimikit</code>.</p>
                                 </section>
-                                <h2>Documentation 🔍</h2>
+                                <h2>Documentation</h2>
                                 <section>
                                     <b>Coming soon</b>: tutorials and documentation for <code>mimikit</code>!
                                 </section>
@@ -84,7 +101,7 @@ function App() {
                         </Route>
                         <Route path={"/music"}>
                             <div>
-                                <h2>Music 🎶</h2>
+                                <h2>Music</h2>
                                 <p>You'll find more examples on our <a
                                     href={"https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw"}>YouTube</a> and <a
                                     href={"https://soundcloud.com/ktonal"}>SoundCloud</a> channels.</p>
@@ -106,65 +123,47 @@ function App() {
                         <Route path={"/writings"}>
                             <div>
                                 <h2>Writings</h2>
-                                in progress... 👩‍🏭
+                                in progress...
                             </div>
                         </Route>
                         <Route path={"/project-gallery"}>
                             <div>
                                 <h2>Projects</h2>
-                                in progress... 👩‍🏭
+                                in progress...
                             </div>
                         </Route>
-                        <Route path={"/members"}>
-                            <div>
-                                <h2>Members</h2>
-                                <div className={"members-list"}>
-                                    <p>
-                                        Antoine Daurat
-                                    </p>
-                                    <p>
-                                        Björn Erlach
-                                    </p>
-                                    <p>
-                                        Roberto Fausti
-                                    </p>
-                                    <p>
-                                        Genoël Lilienstern
-                                    </p>
-                                    <p>
-                                        Dohi Moon
-                                    </p>
-                                </div>
-                            </div>
-                        </Route>
+                        {/*<Route path={"/members"}>*/}
+                        {/*    <div>*/}
+                        {/*        <h2>Members</h2>*/}
+                        {/*    </div>*/}
+                        {/*</Route>*/}
                     </div>
                 </Switch>
             </Router>
             {/*</div>*/}
             <footer className={"footer"}>
                 <div className={"icon-div"}>
-                    <p>Find us on</p>
                     <div className={"icons"}>
                     <a href="https://facebook.com/katonal" target="_blank" rel="noreferrer">
-                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
                             <FaFacebook/>
                         </IconContext.Provider>
                     </a>
 
                     <a href="https://github.com/ktonal" target="_blank" rel="noreferrer">
-                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
                             <FaGithub/>
                         </IconContext.Provider>
                     </a>
 
                     <a href="https://youtube.com/" target="_blank" rel="noreferrer">
-                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
                             <FaYoutube/>
                         </IconContext.Provider>
                     </a>
 
                     <a href="https://soundcloud.com/ktonal" target="_blank" rel="noreferrer">
-                        <IconContext.Provider value={{size: 25, className: 'contact-icon'}}>
+                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
                             <FaSoundcloud/>
                         </IconContext.Provider>
                     </a>

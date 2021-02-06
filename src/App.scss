@@ -16,7 +16,7 @@ $k-black: #fafafaee;
     width: 100vw;
     height: auto;
     z-index: -1;
-    opacity: .5;
+    opacity: .95;
     //background-position: 200px 200px;
   }
 }
@@ -60,7 +60,7 @@ $k-black: #fafafaee;
 .content-container {
   max-width: 80vw;
   margin: 0 5vw 5vh $sidebar-width;
-  min-height: 70vh;
+  min-height: 80vh;
   text-align: justify;
   padding: $header-height 2em 0 2em;
   //background: #fafafa22;
@@ -81,13 +81,6 @@ $k-black: #fafafaee;
   }
 }
 
-.content-section {
-  width: 100%;
-  background: #25252555;
-  color: #fafafaee;
-  padding: 5px 50px;
-
-}
 
 .footer {
   margin: 0 0 0 $sidebar-width;
