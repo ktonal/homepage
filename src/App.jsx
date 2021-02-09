@@ -38,14 +38,15 @@ function App() {
                             <div>
 
                                 <h2>What's ktonal?</h2>
-                                <p>ktonal is a group of composers working on AI-powered
-                                    sound generation.</p>
-                                <p>We code and compose music.</p>
+                                <p>ktonal is a group of composers dedicated to AI-powered sound generation.</p>
+                                <p>We conduct our own research, write code and compose music.</p>
 
                                 <h2>What's our deal?</h2>
+                                <p>We combine a developers perspective with composers interests.</p>
+                                <p>Though AI opens a whole new universe of possibilities, few systems are taylored to experimental artistic usage.</p>
                                 <p>Current AI/Deep-Learning systems for sounds and music are huge, expensive and hard to personalize.</p>
                                 <p>That sucks...</p>
-                                <p>We provide accessible tools for making unheard music and sound art.</p>
+                                <p>We develop accessible, open-source tools for our own work and anybody interested.</p>
 
                                 <h2>How do you pronounce "ktonal"?</h2>
                                 <p>Spell the "k", then say "tonal".</p>
@@ -75,28 +76,30 @@ function App() {
                         <Route path={"/code"}>
                             <div>
                                 <h2>Code</h2>
-                                <p>There's no AI without code!</p>
                                 <p>We open-source all the code we develop.</p>
+                                <p>{"If you want to get a practical first impression, open up our "}
+                                    <a href={"https://colab.research.google.com/github/k-tonal/mimikit-notebooks/blob/main/Docs/Mimikit_Get_Started.ipynb"}>
+                                        Getting Started notebook in colab</a>.</p>
 
                                 <h2>Repositories</h2>
-                                <section>You'll find all repos on our <a href={"https://github.com/ktonal"}>GitHub
+                                <section>You'll find all repos on our <a href={"https://github.com/k-tonal"}>GitHub
                                     page</a>.
-                                    <h3><a href={"https://github.com/ktonal/mimikit"}><code>mimikit</code></a></h3>
+                                    <h3><a href={"https://github.com/k-tonal/mimikit"}><code>mimikit</code></a></h3>
                                     <p>python package for making deep generative models with your own
                                         audio files.</p>
 
                                     <h3><a
-                                        href={"https://github.com/ktonal/mimikit-notebooks"}>the <code>mimikit-notebooks</code></a>
+                                        href={"https://github.com/k-tonal/mimikit-notebooks"}>the <code>mimikit-notebooks</code></a>
                                     </h3>
                                     <p>set of plug & play notebooks to use mimikit in colab.</p>
-                                    <h3><a href={"https://github.com/ktonal"}><code>axx</code></a></h3>
+                                    <h3><a href={"https://github.com/k-tonal"}><code>axx</code></a></h3>
                                     <p>webapp still in early development to visualize and listen to the
                                         models made with <code>mimikit</code>.</p>
                                 </section>
-                                <h2>Documentation</h2>
-                                <section>
-                                    <b>Coming soon</b>: tutorials and documentation for <code>mimikit</code>!
-                                </section>
+                                {/*<h2>Documentation</h2>*/}
+                                {/*<section>*/}
+                                {/*    <b>Coming soon</b>: tutorials and documentation for <code>mimikit</code>!*/}
+                                {/*</section>*/}
                             </div>
                         </Route>
                         <Route path={"/music"}>
