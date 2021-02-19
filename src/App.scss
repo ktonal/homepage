@@ -1,15 +1,23 @@
-$sidebar-width: 250px;
-$header-height: 92px;
+//$sidebar-width: 250px;
+//$header-height: 92px;
 
 $k-white: #fafafa;
 $k-black: #080808;
+$link-blue: #5aa9ce;
+
 body {
   background-color: $k-black;
+  color: $k-white;
+  display: grid;
+  align-items: center;
 }
 
 .main {
-  height: max-content;
+}
 
+header {
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -17,94 +25,75 @@ h1 {
 }
 
 a {
-  color: #5aa9ce;
+  color: $link-blue;
+}
+
+.k-logo {
+  width: 200px;
+  height: auto;
+  margin: 20px;
 }
 
 .stripe {
-  padding: 1em 3em 1em 3em;
+  padding: 1em 5em 1em 5em;
 }
 
-.description {
-  width: 30%;
-  margin: auto;
-  font-size: 1.25em;
-
-}
-
-.ktonal {
+.positive {
   background-color: $k-white;
   color: $k-black;
-
-  .header {
-    display: flex;
-    align-items: center;
-
-    .what-the-k {
-      display: inherit;
-      align-items: inherit;
-      margin: auto;
-    }
-
-    .k-logo {
-      width: 200px;
-      height: auto;
-      margin: 20px;
-    }
-
-    .faq {
-      p {
-        padding-left: 2em;
-        margin-top: 20px;
-      }
-    }
-  }
-
-  //.answer {
-  //  max-width: 80%;
-  //}
 }
 
-.music {
+.negative {
   background-color: $k-black;
   color: $k-white;
+}
+
+.header {
+  flex: 1;
+  //max-width: 1600px;
   display: flex;
   align-items: center;
 
-  .intro {
-    align-items: center;
-    margin: 0;
-  }
-
-  .player {
+  .title {
     display: flex;
     align-items: center;
-    width: 50%;
+    margin: auto;
+  }
 
+  .summary {
+    font-size: 1.25em;
+    margin: auto;
   }
 }
 
-.code {
-  background-color: $k-white;
-  color: $k-black;
-  height: 25vh;
+.more {
+  text-align: center;
+  text-decoration: underline $link-blue;
+  color: $link-blue;
+}
+
+.content {
   display: flex;
 
-  .header {
-    display: flex;
-    align-items: center;
-
-    h1 {
-      margin: auto 10px;
-      text-align: center;
-    }
-
-    .code-img {
-      width: 30%;
-      opacity: .5;
-      margin: 1%;
-      padding: 1em;
-    }
+  .answer {
+    max-width: 80%;
   }
+
+  margin: auto;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  width: 50%;
+
+}
+
+.code-img {
+  width: 30%;
+  opacity: .5;
+  margin: 1%;
+  padding: 1em;
 }
 
 svg {
@@ -118,6 +107,7 @@ svg {
 
   .motto {
     width: 100%;
+
     p {
       width: max-content;
       max-width: 100vw;
