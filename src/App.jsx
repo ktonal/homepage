@@ -5,6 +5,7 @@ import {FaGithub, FaFacebook, FaSoundcloud, FaYoutube, FaChevronLeft, FaChevronR
 
 import './App.scss';
 import {links} from './music-links';
+import Waveform from "./Waveform";
 
 
 function Stripe(props) {
@@ -55,14 +56,19 @@ function App() {
         <>{isLanding ?
             <div className={"landing"}>
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/>
-                <div className={"ktonal-landing"}>
-                    <img src={window.location.origin + "/k-circle-bw.svg"}
-                         className="k-landing"
-                         alt="logo"/>
-                    <h1>T O N A L</h1>
-                </div>
-                <div className={"enter"}>
-                    <a onClick={() => setIsLanding(false)}>ENTER</a>
+                <div className={"landing-area"}>
+                    <div className={"ktonal-landing"}>
+                        <img src={window.location.origin + "/k-circle-bw.svg"}
+                             className="k-landing"
+                             alt="logo"/>
+                        <h1>T O N A L</h1>
+                    </div>
+                    <Waveform
+                        url={"https://raw.githubusercontent.com/k-tonal/axx/gh-pages/files/experiment-2/EX2-122/audios/prompt%3D20393.mp3"}
+                    />
+                    <div className={"enter"}>
+                        <button onClick={() => setIsLanding(false)}>ENTER</button>
+                    </div>
                 </div>
             </div>
             :
