@@ -5,7 +5,7 @@ $k-white: #fafafa;
 $k-black: #080808;
 $k-white-bg: #fafafaAA;
 $k-black-bg: #08080888;
-$link-blue: #5aa9ce;
+$link-blue: #538ece;
 
 body {
   color: $k-white;
@@ -144,6 +144,7 @@ header {
   top: 0;
   height: max-content;
   padding: 0 5em;
+
   #logo {
     display: flex;
     align-items: center;
@@ -156,6 +157,10 @@ header {
 
     a {
       margin: auto;
+      color: $k-white;
+      text-decoration: none;
+      border-bottom: 2px solid $k-white;
+      padding-bottom: 5px;
     }
   }
 }
