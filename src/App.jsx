@@ -74,7 +74,7 @@ function App() {
             :
             <div className="main">
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
-                <header className={"top stripe negative"}>
+                <header className={"top negative"}>
                     <div id={"logo"} onClick={() => setIsLanding(true)}>
                         <img src={window.location.origin + "/k-circle-bw.svg"} className="k-logo"
                              alt="logo"/>
@@ -227,10 +227,8 @@ function App() {
                     }
                     content={
                         <Content>
-                            <h1>{"|{"}</h1>
                             <img src={window.location.origin + "/code-screenshot.png"} className="code-img"
                                  alt="logo"/>
-                            <h1>{"}|"}</h1>
                         </Content>
                     }
                 />

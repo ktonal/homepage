@@ -66,23 +66,15 @@ body {
   .btv-landing {
     position: absolute;
     top: 0;
-    //left: 50%;
-    //margin: 0 auto 0 auto;
     height: 100vh;
     width: auto;
     z-index: -1;
-    //-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-    //-moz-animation: fadein 3s; /* Firefox < 16 */
-    //-ms-animation: fadein 3s; /* Internet Explorer */
-    //-o-animation: fadein 3s; /* Opera < 12.1 */
-    //animation: fadein 3s;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
   }
-
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
-  animation: fadein 3s;
 }
 
 @keyframes fadein {
@@ -148,7 +140,10 @@ body {
 
 header {
   display: flex;
-
+  position: sticky;
+  top: 0;
+  height: max-content;
+  padding: 0 5em;
   #logo {
     display: flex;
     align-items: center;
@@ -205,14 +200,13 @@ a {
 
 .header {
   margin: auto;
-  //max-width: 1200px;
   display: flex;
   align-items: center;
 
   .title {
     display: flex;
     align-items: center;
-    margin: auto;
+    margin: 60px auto;
   }
 
   .summary {
@@ -229,7 +223,7 @@ a {
 
 .content {
   display: flex;
-  margin: auto;
+  margin: 60px auto;
 
   .info {
     margin: 0 5%;
