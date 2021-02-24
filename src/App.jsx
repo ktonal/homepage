@@ -12,7 +12,7 @@ function Stripe(props) {
     const [isOpen, setOpen] = React.useState(true);
     const isEven = (props.index % 2) === 0;
     return (
-        <div className={"stripe" + (isEven ? " positive" : " negative")}>
+        <div className={"stripe" + (isEven ? " positive" : " negative")} id={props.id}>
             <div className={"header"}>
                 {isEven
                     ? <>{[props.title, props.summary]}</>
@@ -162,6 +162,7 @@ function App() {
                     }
                 />
                 <Stripe
+                    id={"music"}
                     index={1}
                     title={
                         <Title>
@@ -204,6 +205,7 @@ function App() {
                     }
                 />
                 <Stripe
+                    id={"code"}
                     index={2}
                     title={
                         <Title>
@@ -235,7 +237,7 @@ function App() {
                 <footer className={"footer stripe negative"}>
                     <div className={"motto"}>
                         <p>K T O N A L </p>
-                        <p>Music with AI from Music to AI in Music for AI as Music of AI for Music to AI</p>
+                        {/*<p>Music with AI from Music to AI in Music for AI as Music of AI for Music to AI</p>*/}
                     </div>
                     <div className={"icon-div"}>
                         <div className={"icons"}>

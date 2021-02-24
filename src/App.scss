@@ -17,13 +17,13 @@ body {
 
 .landing {
   display: grid;
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   margin: 0 auto 0 auto;
   background-color: $k-black-bg;
 
   .landing-area {
-    margin: auto 10% auto auto;
+    margin: 55vh 20% auto auto;
     height: 33vh;
   }
 
@@ -131,7 +131,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: auto;
     height: 100vh;
     z-index: -1;
     opacity: .15;
@@ -148,13 +148,14 @@ header {
   #logo {
     display: flex;
     align-items: center;
-    margin: 0 auto 0 0;
+    margin: 0 0 0 0;
   }
 
   #navbar {
     display: flex;
+    //flex: 1;
     width: 50%;
-
+    margin-left: auto;
     a {
       margin: auto;
       color: $k-white;
@@ -191,11 +192,6 @@ a {
 .positive {
   background-color: $k-white-bg;
   color: $k-black;
-
-  //&::before {
-  //  content: "";
-  //  opacity: 0.5;
-  //}
 }
 
 .negative {
@@ -205,7 +201,6 @@ a {
 
 .header {
   margin: auto;
-  display: flex;
   align-items: center;
 
   .title {
@@ -240,7 +235,8 @@ a {
 .player {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  height: auto;
   margin: 1em auto;
 
 }
