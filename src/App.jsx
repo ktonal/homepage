@@ -6,6 +6,7 @@ import {FaGithub, FaFacebook, FaSoundcloud, FaYoutube, FaChevronLeft, FaChevronR
 import './App.scss';
 import {links} from './music-links';
 import Waveform from "./Waveform";
+import CodeBlock from "./CodeBlock"
 
 
 function Stripe(props) {
@@ -197,7 +198,7 @@ function App() {
                     }
                 />
                 <Stripe
-                    id={"code"}
+                    id={"code-section"}
                     index={2}
                     title={
                         <Title>
@@ -221,8 +222,25 @@ function App() {
                     }
                     content={
                         <Content>
-                            <img src={window.location.origin + "/code-screenshot.png"} className="code-img"
-                                 alt="logo"/>
+                            <div id={"code-sample"}>
+                                <CodeBlock
+                                    input={`
+    from mimikit.freqnet import FreqNet
+    
+    path_to_ckpt = path_to_model + "MOD-134/states/epoch=X.ckpt"
+
+    model = FreqNet.load_from_checkpoint(path_to_ckpt, data_object=db.fft)
+    
+    for i in range(8):
+        audio = model.generate(model.random_train_example(),
+                              n_steps=2048,
+                              hop_length=db.fft.attrs["hop_length"])
+        model.log_audio("train_example_" + str(i), audio)
+                                       `}
+                                /> <CodeBlock
+                                input={``}
+                            />
+                            </div>
                         </Content>
                     }
                 />

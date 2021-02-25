@@ -280,11 +280,14 @@ a {
   }
 }
 
-.code-img {
-  width: 30%;
-  opacity: .5;
+#code-section {
+}
+
+pre {
+  background-color: #FFFFFF00 !important;
+}
+#code-sample {
   margin: auto;
-  padding: 1em;
 }
 
 svg {
