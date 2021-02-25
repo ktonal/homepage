@@ -48,6 +48,21 @@ function Content(props) {
     )
 }
 
+function EmbedPlayer(props) {
+    return (
+        <div className={"player"} key={props.url}>
+            <ReactPlayer url={props.url}
+                         width={"311px"}
+                         height={"311px"}
+                         light={true}
+                         controls={true}
+            />
+            <h4>{props.title}</h4>
+            <p>{props.description}</p>
+        </div>
+    )
+}
+
 
 function App() {
     const [linkIdx, setLinkIdx] = React.useState(0);
@@ -74,7 +89,7 @@ function App() {
             :
             <div className="main">
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
-                <header className={"top negative"}>
+                <header className={"top"}>
                     <div id={"logo"} onClick={() => setIsLanding(true)}>
                         <img src={window.location.origin + "/k-circle-bw.svg"} className="k-logo"
                              alt="logo"/>
@@ -107,13 +122,6 @@ function App() {
                     }
                     content={
                         <Content>
-                            {/*<div className={"info"}>*/}
-                            {/*    <h3 className={"question"}>What's KTONAL?</h3>*/}
-                            {/*    <div className={"answer"}>*/}
-                            {/*        <p>ktonal is a group of composers dedicated to AI-powered sound generation.</p>*/}
-                            {/*        <p>We conduct our own research, write code and compose music.</p>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                             <div className={"info"}>
                                 <h3 className={"question"}>What's our deal?</h3>
                                 <div className={"answer"}>
@@ -136,9 +144,6 @@ function App() {
                                     <p>Spell the "k", then say "tonal".</p>
                                     <p>The "k" stands for the german word for AI : "Künstliche Intelligenz".</p>
                                 </div>
-                            </div>
-
-                            <div className={"info"}>
                                 <h3 className={"question"}>Who is KTONAL?</h3>
                                 <div className={"answer"}>
                                     <p>
@@ -184,22 +189,8 @@ function App() {
                     }
                     content={
                         <Content>
-                            <div className={"player"}>
-                        <span className={"previous"}
-                              onClick={() => setLinkIdx(linkIdx > 0 ? (linkIdx - 1) % links.length : links.length - 1)}>
-                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
-                            <FaChevronLeft/>
-                        </IconContext.Provider>
-                        </span>
-                                <ReactPlayer url={links[linkIdx].url}
-                                             width={"80%"}
-                                             height={"30vh"}
-                                />
-                                <span className={"next"} onClick={() => setLinkIdx((linkIdx + 1) % links.length)}>
-                        <IconContext.Provider value={{size: 40, color: '#666666'}}>
-                            <FaChevronRight/>
-                        </IconContext.Provider>
-                        </span>
+                            <div id={"music-grid"}>
+                                {links.map(link => <EmbedPlayer key={link.url} {...link} />)}
                             </div>
                         </Content>
                     }

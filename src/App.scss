@@ -2,9 +2,10 @@
 //$header-height: 92px;
 
 $k-white: #fafafa;
-$k-black: #080808;
+$k-black: rgb(37, 37, 37);
 $k-white-bg: #fafafaAA;
 $k-black-bg: #08080888;
+$k-black-bg: rgba(37, 37, 37, 0.87);
 $link-blue: #538ece;
 
 body {
@@ -144,6 +145,8 @@ header {
   top: 0;
   height: max-content;
   padding: 0 5em;
+  background-color: $k-black;
+  z-index: 66;
 
   #logo {
     display: flex;
@@ -156,6 +159,7 @@ header {
     //flex: 1;
     width: 50%;
     margin-left: auto;
+
     a {
       margin: auto;
       color: $k-white;
@@ -224,21 +228,51 @@ a {
 .content {
   display: flex;
   margin: 60px auto;
+  max-width: 80vw;
 
   .info {
-    margin: 0 5%;
-    width: 33%;
+    margin: 0 2%;
+    width: 45%;
   }
 
 }
 
-.player {
+#what-the-k {
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  margin: 1em auto;
+}
 
+#music-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 8fr;
+  gap: 1.2rem 1.2rem;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.player {
+  margin: 1em auto;
+}
+
+// Hack to remove top infos on the media Player
+.player {
+  overflow: hidden;
+  position: relative;
+
+  iframe {
+    //position: absolute;
+    //top: -60px;
+    //left: 0;
+    width: inherit;
+    height: inherit;
+
+  }
 }
 
 .code-img {
