@@ -52,8 +52,8 @@ function EmbedPlayer(props) {
     return (
         <div className={"player"} key={props.url}>
             <ReactPlayer url={props.url}
-                         width={"311px"}
-                         height={"311px"}
+                         width={"320px"}
+                         height={"300px"}
                          light={true}
                          controls={true}
             />
@@ -68,7 +68,7 @@ function App() {
     const [linkIdx, setLinkIdx] = React.useState(0);
     const [isLanding, setIsLanding] = React.useState(true);
     return (
-        <>{isLanding ?
+        <>
             <div className={"landing"}>
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/>
                 <div className={"landing-area"}>
@@ -78,15 +78,16 @@ function App() {
                              alt="logo"/>
                         <h1>T O N A L</h1>
                     </div>
-                    <Waveform
-                        url={"https://raw.githubusercontent.com/k-tonal/axx/gh-pages/files/experiment-2/EX2-122/audios/prompt%3D20393.mp3"}
-                    />
-                    <div className={"enter"}>
-                        <button onClick={() => setIsLanding(false)}>ENTER</button>
-                    </div>
+                    <p>AI for and by composers</p>
+                    {/*<Waveform*/}
+                    {/*    url={"https://raw.githubusercontent.com/k-tonal/axx/gh-pages/files/experiment-2/EX2-122/audios/prompt%3D20393.mp3"}*/}
+                    {/*/>*/}
+                    {/*<div className={"enter"}>*/}
+                    {/*    <button onClick={() => setIsLanding(false)}>ENTER</button>*/}
+                    {/*</div>*/}
                 </div>
             </div>
-            :
+
             <div className="main">
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
                 <header className={"top"}>
@@ -258,7 +259,7 @@ function App() {
                     </div>
                 </footer>
             </div>
-        }</>);
+        </>);
 }
 
 export default App;

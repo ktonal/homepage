@@ -3,9 +3,9 @@
 
 $k-white: #fafafa;
 $k-black: rgb(37, 37, 37);
-$k-white-bg: #fafafaAA;
-$k-black-bg: #08080888;
-$k-black-bg: rgba(37, 37, 37, 0.87);
+$k-white-bg: #fafafaEE;
+$k-black-bg: rgb(37, 37, 37);
+//$k-black-bg: rgba(37, 37, 37, 0.87);
 $link-blue: #538ece;
 
 body {
@@ -18,14 +18,15 @@ body {
 
 .landing {
   display: grid;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 98vw;
+  min-height: 94vh;
   margin: 0 auto 0 auto;
-  background-color: $k-black-bg;
+  background-color: rgba(37, 37, 37, .12);
 
   .landing-area {
     margin: 55vh 20% auto auto;
     height: 33vh;
+    color: $k-black;
   }
 
   .k-landing {
@@ -65,7 +66,7 @@ body {
   }
 
   .btv-landing {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100vh;
     width: auto;
@@ -258,6 +259,10 @@ a {
 
 .player {
   margin: 1em auto;
+
+  p {
+    width: 320px;
+  }
 }
 
 // Hack to remove top infos on the media Player
