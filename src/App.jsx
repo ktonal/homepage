@@ -53,8 +53,8 @@ function EmbedPlayer(props) {
     return (
         <div className={"player"} key={props.url}>
             <ReactPlayer url={props.url}
-                         width={"320px"}
-                         height={"300px"}
+                         width={"280px"}
+                         height={"250px"}
                          light={true}
                          controls={true}
             />
@@ -79,7 +79,7 @@ function App() {
                              alt="logo"/>
                         <h1>T O N A L</h1>
                     </div>
-                    <p>AI for and by composers</p>
+                    <h2>Learning machines for and by musicians</h2>
                     {/*<Waveform*/}
                     {/*    url={"https://raw.githubusercontent.com/k-tonal/axx/gh-pages/files/experiment-2/EX2-122/audios/prompt%3D20393.mp3"}*/}
                     {/*/>*/}
@@ -115,15 +115,15 @@ function App() {
                             <h1> ? </h1>
                         </Title>
                     }
-                    summary={
-
-                        <Summary>
-                            <p>KTONAL is a group of composers dedicated to AI-powered sound generation.</p>
-                            <p>We conduct our own research, write code and compose music.</p>
-                        </Summary>
-                    }
                     content={
                         <Content>
+                            <div className={"info"}>
+                                <h3 className={"question"}>What's KTONAL?</h3>
+                                <div className={"answer"}>
+                                    <p>KTONAL is a group of composers dedicated to AI-powered sound generation.</p>
+                                    <p>We conduct our own research, write code and compose music.</p>
+                                </div>
+                            </div>
                             <div className={"info"}>
                                 <h3 className={"question"}>What's our deal?</h3>
                                 <div className={"answer"}>
@@ -139,13 +139,14 @@ function App() {
                                         interested.</p>
                                 </div>
                             </div>
-
                             <div className={"info"}>
                                 <h3 className={"question"}>How do you pronounce "ktonal"?</h3>
                                 <div className={"answer"}>
                                     <p>Spell the "k", then say "tonal".</p>
                                     <p>The "k" stands for the german word for AI : "Künstliche Intelligenz".</p>
                                 </div>
+                            </div>
+                            <div className={"info"}>
                                 <h3 className={"question"}>Who is KTONAL?</h3>
                                 <div className={"answer"}>
                                     <p>
@@ -178,15 +179,16 @@ function App() {
                     }
                     summary={
                         <Summary>
-                            <p>Lorem Ipsum, music music.</p>
-                            <p>Follow us on {"  "}
+                            <p>Here, you can listen to out latest sound studies where we explore the capabilities of the
+                                code we are developing</p>
+                            <p>You'll find all of them on our {"  "}
                                 <a href="https://youtube.com/" target="_blank" rel="noreferrer">
                                     YouTube
                                 </a>{" "}and{" "}
                                 <a href="https://soundcloud.com/ktonal" target="_blank" rel="noreferrer">
                                     SoundCloud
                                 </a>
-                                {" "}to get the latest tunes.</p>
+                                {" "}channels.</p>
                         </Summary>
                     }
                     content={
@@ -207,21 +209,20 @@ function App() {
                     }
                     summary={
                         <Summary>
-                            <p>We are working on several open-source projects to facilitate and democratize
-                                audio
-                                generation
-                                with state-of-the-art algorithms.</p>
-                            <p>You'll find all of them on our {" "}
-                                <a href="https://github.com/ktonal" target="_blank"
-                                   rel="noreferrer">
-                                    GitHub
-                                </a>
-                                .
-                            </p>
-                        </Summary>
-                    }
-                    content={
-                        <Content>
+                            <div>
+                                <p>We are working on several open-source projects to facilitate and democratize
+                                    audio
+                                    generation
+                                    with Neural Networks.
+                                </p>
+                                <p>You'll find all of them on our {" "}
+                                    <a href="https://github.com/ktonal" target="_blank"
+                                       rel="noreferrer">
+                                        GitHub
+                                    </a>
+                                    .
+                                </p>
+                            </div>
                             <div id={"code-sample"}>
                                 <CodeBlock
                                     input={`
@@ -241,6 +242,11 @@ function App() {
                                 input={``}
                             />
                             </div>
+                        </Summary>
+                    }
+                    content={
+                        <Content>
+
                         </Content>
                     }
                 />
