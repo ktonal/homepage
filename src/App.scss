@@ -220,7 +220,10 @@ a {
       break-inside: avoid;
 
       .question {
+        //width: max-content;
         margin-top: 0;
+        //border-top: solid 1px $k-black;
+        //padding-top: 8px;
       }
     }
   }

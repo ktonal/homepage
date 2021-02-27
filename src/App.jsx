@@ -64,6 +64,10 @@ function EmbedPlayer(props) {
     )
 }
 
+function WaveDiv(props){
+
+}
+
 
 function App() {
     const [linkIdx, setLinkIdx] = React.useState(0);
@@ -100,7 +104,7 @@ function App() {
                     <div id={"navbar"}>
                         <a href={"#what-the-k"}>what the K?</a>
                         <a href={"#music"}>music</a>
-                        <a href={"#code"}>code</a>
+                        <a href={"#code-section"}>code</a>
                     </div>
 
                 </header>
