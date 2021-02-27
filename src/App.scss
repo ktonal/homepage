@@ -282,10 +282,29 @@ a {
     display: flex;
   }
 
-  #code-sample {
-    margin: auto;
-    font-size: initial;
-    padding: 0 0 0 3%;
+  .project {
+    display: flex;
+    margin-bottom: 2em;
+
+    .description {
+      width: 50%;
+      margin: 0 auto auto 0;
+    }
+
+    .sample {
+      width: 50%;
+      //max-height: 400px;
+      font-size: initial;
+      padding: 0 0 0 3%;
+    }
+
+    #axx-screenshot {
+      margin: 1em auto 0 auto;
+      height: 45%;
+      width: 85%;
+      object-fit: cover;
+      object-position: 5% 10%;
+    }
   }
 }
 

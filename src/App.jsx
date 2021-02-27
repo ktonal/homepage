@@ -64,7 +64,7 @@ function EmbedPlayer(props) {
     )
 }
 
-function WaveDiv(props){
+function WaveDiv(props) {
 
 }
 
@@ -227,9 +227,30 @@ function App() {
                                     .
                                 </p>
                             </div>
-                            <div id={"code-sample"}>
-                                <CodeBlock
-                                    input={`
+                        </Summary>
+                    }
+                    content={
+                        <Content>
+                            <div className={"project"}>
+                                <div className={"description"}>
+                                    <h3>mimikit</h3>
+                                    <p><code>mimikit</code> is an open-source python package for audio and music data
+                                        modeling with neural networks.</p>
+
+                                    <p>It is build on top of `torch` and is easy to use on google colab.
+                                        The aim is to provide machine learning tools to music composers
+                                        who want to explore deep learning and related techniques with
+                                        data of their own choosing.
+                                    </p>
+
+                                    <p>It includes several variations of FreqNet, which is a frequency domain model with
+                                        a
+                                        wavelet like structure.
+                                    </p>
+                                </div>
+                                <div className={"sample"}>
+                                    <CodeBlock
+                                        input={`
     from mimikit.freqnet import FreqNet
     
     path_to_ckpt = path_to_model + "MOD-134/states/epoch=X.ckpt"
@@ -242,15 +263,30 @@ function App() {
                               hop_length=db.fft.attrs["hop_length"])
         model.log_audio("train_example_" + str(i), audio)
                                        `}
-                                /> <CodeBlock
-                                input={``}
-                            />
+                                    />
+                                </div>
                             </div>
-                        </Summary>
-                    }
-                    content={
-                        <Content>
+                            <div className={"project"}>
+                                <div className={"description"}>
+                                    <h3>Audio Experiment Explorer</h3>
+                                    <p><code>axx</code> is an open-source python package for audio and music data
+                                        modeling with neural networks.</p>
 
+                                    <p>It is build on top of `torch` and is easy to use on google colab.
+                                        The aim is to provide machine learning tools to music composers
+                                        who want to explore deep learning and related techniques with
+                                        data of their own choosing.
+                                    </p>
+
+                                    <p>It includes several variations of FreqNet, which is a frequency domain model with
+                                        a
+                                        wavelet like structure.
+                                    </p>
+                                </div>
+                                <div className={"sample"}>
+                                    <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} />
+                                </div>
+                            </div>
                         </Content>
                     }
                 />
