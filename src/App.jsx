@@ -78,7 +78,7 @@ function App() {
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/>
                 <div className={"landing-area"}>
                     <div className={"ktonal-landing"}>
-                        <img src={window.location.origin + "/k-circle-bw.svg"}
+                        <img src={window.location.origin + "/k-circle-bw.png"}
                              className="k-landing"
                              alt="logo"/>
                         <h1>T O N A L</h1>
@@ -97,7 +97,7 @@ function App() {
                 <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
                 <header className={"top"}>
                     <div id={"logo"} onClick={() => setIsLanding(true)}>
-                        <img src={window.location.origin + "/k-circle-bw.svg"} className="k-logo"
+                        <img src={window.location.origin + "/k-circle-bw.png"} className="k-logo"
                              alt="logo"/>
                         <h3>T O N A L</h3>
                     </div>
@@ -114,7 +114,7 @@ function App() {
                     title={
                         <Title>
                             <h1>What the </h1>
-                            <img src={window.location.origin + "/k-circle-bw.svg"} className="k-about"
+                            <img src={window.location.origin + "/k-circle-bw.png"} className="k-about"
                                  alt="logo"/>
                             <h1> ? </h1>
                         </Title>
