@@ -1,8 +1,11 @@
 import React from 'react';
+//import Sketch from "react-p5";
+//import p5 from 'p5';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from './sketch';
 import ReactPlayer from "react-player";
 import {IconContext} from 'react-icons';
 import {FaGithub, FaFacebook, FaSoundcloud, FaYoutube, FaChevronLeft, FaChevronRight} from 'react-icons/fa';
-
 import './App.scss';
 import {links} from './music-links';
 import Waveform from "./Waveform";
@@ -70,12 +73,18 @@ function WaveDiv(props){
 
 
 function App() {
+
     const [linkIdx, setLinkIdx] = React.useState(0);
     const [isLanding, setIsLanding] = React.useState(true);
     return (
         <>
             <div className={"landing"}>
-                <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/>
+
+              {/* <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/> */}
+               <div className={"btv-landing"}>
+                  <P5Wrapper sketch = {sketch} />
+                </div>
+
                 <div className={"landing-area"}>
                     <div className={"ktonal-landing"}>
                         <img src={window.location.origin + "/k-circle-bw.png"}
@@ -94,7 +103,7 @@ function App() {
             </div>
 
             <div className="main">
-                <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
+              //  <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
                 <header className={"top"}>
                     <div id={"logo"} onClick={() => setIsLanding(true)}>
                         <img src={window.location.origin + "/k-circle-bw.png"} className="k-logo"
@@ -231,11 +240,11 @@ function App() {
                                 <CodeBlock
                                     input={`
     from mimikit.freqnet import FreqNet
-    
+
     path_to_ckpt = path_to_model + "MOD-134/states/epoch=X.ckpt"
 
     model = FreqNet.load_from_checkpoint(path_to_ckpt, data_object=db.fft)
-    
+
     for i in range(8):
         audio = model.generate(model.random_train_example(),
                               n_steps=2048,
