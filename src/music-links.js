@@ -26,24 +26,24 @@ export const links = [
     },
 
     {
-        "url": "https://soundcloud.com/k-tonal/cathy-berberian-berio-sequenza-iii-4",
+        "url": "https://soundcloud.com/ktonal/cathy-berberian-berio-sequenza-iii-4",
         "title": "Cathy Berberian - Berio Sequenza III",
         "description": ""
     },
     {
-        "url": "https://soundcloud.com/k-tonal/cathy-berberian-sequenza-berio-2",
+        "url": "https://soundcloud.com/ktonal/cathy-berberian-sequenza-berio-2",
         "title": "Cathy Berberian - Berio Sequenza III",
         "description": ""
 
     },
     {
-        "url": "https://soundcloud.com/k-tonal/bruckner-symphony-no-8-2-2",
+        "url": "https://soundcloud.com/ktonal/bruckner-symphony-no-8-2-2",
         "title": "Bruckner Symphony No. 8, 2nd Movement",
         "description": ""
 
     },
     {
-        "url": "https://soundcloud.com/k-tonal/bruckner-symphony-no-8-2-satz",
+        "url": "https://soundcloud.com/ktonal/bruckner-symphony-no-8-2-satz",
         "title": "Bruckner Symphony No. 8, 2nd Movement",
         "description": ""
     }

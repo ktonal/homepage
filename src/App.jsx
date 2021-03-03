@@ -1,29 +1,20 @@
 import React from 'react';
 import ReactPlayer from "react-player";
 import {IconContext} from 'react-icons';
-import {FaGithub, FaFacebook, FaSoundcloud, FaYoutube, FaChevronLeft, FaChevronRight} from 'react-icons/fa';
+import {FaGithub, FaSoundcloud, FaYoutube} from 'react-icons/fa';
 
 import './App.scss';
 import {links} from './music-links';
-import Waveform from "./Waveform";
 import CodeBlock from "./CodeBlock"
 
 
 function Stripe(props) {
-    const [isOpen, setOpen] = React.useState(true);
-    const isEven = (props.index % 2) === 0;
     return (
-        <div className={"stripe" + (isEven ? " positive" : " negative")} id={props.id}>
+        <div className={"stripe" + (props.isDark ? " negative" : " positive")} id={props.id}>
             <div className={"header"}>
-                {isEven
-                    ? <>{[props.title, props.summary]}</>
-                    : <>{[props.title, props.summary]}</>
-                }
+                {[props.title, props.summary]}
             </div>
-            {/*<p className={"more"} onClick={() => {*/}
-            {/*    setOpen(!isOpen)*/}
-            {/*}}>{isOpen ? "Ok" : "Show Me More"}</p>*/}
-            {isOpen && props.content}
+            {props.content}
         </div>
     )
 }
@@ -58,47 +49,34 @@ function EmbedPlayer(props) {
                          light={true}
                          controls={true}
             />
-            <h4>{props.title}</h4>
-            <p>{props.description}</p>
+            <h4><a href={props.url}>{props.title}</a></h4>
         </div>
     )
 }
 
-function WaveDiv(props) {
-
-}
-
 
 function App() {
-    const [linkIdx, setLinkIdx] = React.useState(0);
-    const [isLanding, setIsLanding] = React.useState(true);
     return (
         <>
-            <div className={"landing"}>
-                <img src={window.location.origin + "/btv-landing.png"} className={"btv-landing"}/>
-                <div className={"landing-area"}>
-                    <div className={"ktonal-landing"}>
+            <div id={"landing"}>
+                <img src={window.location.origin + "/btv-landing.png"} id={"btv-landing"}/>
+                <div id={"landing-area"}>
+                    <div id={"ktonal-landing"}>
                         <img src={window.location.origin + "/k-circle-bw.png"}
-                             className="k-landing"
+                             id="k-landing"
                              alt="logo"/>
                         <h1>T O N A L</h1>
                     </div>
                     <h2>Learning machines for and by musicians</h2>
-                    {/*<Waveform*/}
-                    {/*    url={"https://raw.githubusercontent.com/k-tonal/axx/gh-pages/files/experiment-2/EX2-122/audios/prompt%3D20393.mp3"}*/}
-                    {/*/>*/}
-                    {/*<div className={"enter"}>*/}
-                    {/*    <button onClick={() => setIsLanding(false)}>ENTER</button>*/}
-                    {/*</div>*/}
                 </div>
             </div>
 
-            <div className="main">
-                <img src={window.location.origin + "/btv-landing.png"} className={"btv-background"}/>
-                <header className={"top"}>
-                    <div id={"logo"} onClick={() => setIsLanding(true)}>
-                        <img src={window.location.origin + "/k-circle-bw.png"} className="k-logo"
-                             alt="logo"/>
+            <div id="main">
+                <img src={window.location.origin + "/btv-landing.png"} id={"btv-background"}/>
+                <header id={"top"}>
+                    <div id={"logo"}>
+                        <a href={"#landing"}><img src={window.location.origin + "/k-circle-bw.png"} id="k-logo"
+                             alt="logo"/></a>
                         <h3>T O N A L</h3>
                     </div>
                     <div id={"navbar"}>
@@ -110,11 +88,11 @@ function App() {
                 </header>
                 <Stripe
                     id={"what-the-k"}
-                    index={0}
+                    isDark={false}
                     title={
                         <Title>
                             <h1>What the </h1>
-                            <img src={window.location.origin + "/k-circle-bw.png"} className="k-about"
+                            <img src={window.location.origin + "/k-circle-bw.png"} id="k-about"
                                  alt="logo"/>
                             <h1> ? </h1>
                         </Title>
@@ -175,7 +153,7 @@ function App() {
                 />
                 <Stripe
                     id={"music"}
-                    index={1}
+                    isDark={true}
                     title={
                         <Title>
                             <h1>Music</h1>
@@ -183,7 +161,7 @@ function App() {
                     }
                     summary={
                         <Summary>
-                            <p>Here, you can listen to out latest sound studies where we explore the capabilities of the
+                            <p>Listen to our latest sound studies made with the
                                 code we are developing</p>
                             <p>You'll find all of them on our {"  "}
                                 <a href="https://youtube.com/" target="_blank" rel="noreferrer">
@@ -205,7 +183,7 @@ function App() {
                 />
                 <Stripe
                     id={"code-section"}
-                    index={2}
+                    isDark={false}
                     title={
                         <Title>
                             <h1>Code</h1>
@@ -217,7 +195,7 @@ function App() {
                                 <p>We are working on several open-source projects to facilitate and democratize
                                     audio
                                     generation
-                                    with Neural Networks.
+                                    with neural networks.
                                 </p>
                                 <p>You'll find all of them on our {" "}
                                     <a href="https://github.com/ktonal" target="_blank"
@@ -237,16 +215,16 @@ function App() {
                                     <p><code>mimikit</code> is an open-source python package for audio and music data
                                         modeling with neural networks.</p>
 
-                                    <p>It is build on top of `torch` and is easy to use on google colab.
+                                    <p>It is build on top of torch and is easy to use on google colab.
                                         The aim is to provide machine learning tools to music composers
                                         who want to explore deep learning and related techniques with
                                         data of their own choosing.
                                     </p>
 
-                                    <p>It includes several variations of FreqNet, which is a frequency domain model with
-                                        a
-                                        wavelet like structure.
-                                    </p>
+                                    {/*<p>It includes several variations of FreqNet, which is a frequency domain model with*/}
+                                    {/*    a*/}
+                                    {/*    wavelet like structure.*/}
+                                    {/*</p>*/}
                                 </div>
                                 <div className={"sample"}>
                                     <CodeBlock
@@ -291,18 +269,12 @@ function App() {
                     }
                 />
                 <footer className={"footer stripe negative"}>
-                    <div className={"motto"}>
+                    <div id={"ktonal-footer"}>
                         <p>K T O N A L </p>
-                        {/*<p>Music with AI from Music to AI in Music for AI as Music of AI for Music to AI</p>*/}
                     </div>
                     <div className={"icon-div"}>
                         <div className={"icons"}>
-                            <a href="https://facebook.com/katonal" target="_blank" rel="noreferrer">
-                                <IconContext.Provider value={{size: 40, color: '#CCC'}}>
-                                    <FaFacebook/>
-                                </IconContext.Provider>
-                            </a>
-                            <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+                            <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank" rel="noreferrer">
                                 <IconContext.Provider value={{size: 40, color: '#CCC'}}>
                                     <FaYoutube/>
                                 </IconContext.Provider>
