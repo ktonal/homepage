@@ -211,20 +211,12 @@ function App() {
                         <Content>
                             <div className={"project"}>
                                 <div className={"description"}>
-                                    <h3>mimikit</h3>
+                                    <h3><a href={"https://github.com/ktonal/mimikit"}>mimikit</a></h3>
                                     <p><code>mimikit</code> is an open-source python package for audio and music data
                                         modeling with neural networks.</p>
 
-                                    <p>It is build on top of torch and is easy to use on google colab.
-                                        The aim is to provide machine learning tools to music composers
-                                        who want to explore deep learning and related techniques with
-                                        data of their own choosing.
-                                    </p>
-
-                                    {/*<p>It includes several variations of FreqNet, which is a frequency domain model with*/}
-                                    {/*    a*/}
-                                    {/*    wavelet like structure.*/}
-                                    {/*</p>*/}
+                                    <p>It contains models out-of-the-box and simple utilities for dealing with audio data.</p>
+                                    <p>The aim of mimikit is double : it will lower the barrier to deep-learning for non-developers while providing tools to developers that enable fast experimentation.</p>
                                 </div>
                                 <div className={"sample"}>
                                     <CodeBlock
@@ -247,19 +239,8 @@ function App() {
                             <div className={"project"}>
                                 <div className={"description"}>
                                     <h3>Audio Experiment Explorer</h3>
-                                    <p><code>axx</code> is an open-source python package for audio and music data
-                                        modeling with neural networks.</p>
-
-                                    <p>It is build on top of `torch` and is easy to use on google colab.
-                                        The aim is to provide machine learning tools to music composers
-                                        who want to explore deep learning and related techniques with
-                                        data of their own choosing.
-                                    </p>
-
-                                    <p>It includes several variations of FreqNet, which is a frequency domain model with
-                                        a
-                                        wavelet like structure.
-                                    </p>
+                                    <p><code>aXX</code> is small web application to explore the outputs of audio generative models made with mimikit and stored in neptune.ai.</p>
+                                    <p>Visit a <a href={"https://ktonal.github.io/axx"}>live demo</a> containing experiments we made.</p>
                                 </div>
                                 <div className={"sample"}>
                                     <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} />

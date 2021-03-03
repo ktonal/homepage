@@ -261,11 +261,12 @@ a {
 
   .project {
     display: flex;
-    margin-bottom: 2em;
+    margin: 2em auto;
 
     .description {
       width: 50%;
       margin: 0 auto auto 0;
+      text-align: justify;
     }
 
     .sample {
