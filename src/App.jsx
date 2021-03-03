@@ -240,7 +240,6 @@ function App() {
                                 <div className={"description"}>
                                     <h3>Audio Experiment Explorer</h3>
                                     <p><code>aXX</code> is small web application to explore the outputs of audio generative models made with mimikit and stored in neptune.ai.</p>
-                                    <p>Visit a <a href={"https://ktonal.github.io/axx"}>live demo</a> containing experiments we made.</p>
                                 </div>
                                 <div className={"sample"}>
                                     <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} alt={""}/>
