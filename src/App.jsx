@@ -164,7 +164,7 @@ function App() {
                             <p>Listen to our latest sound studies made with the
                                 code we are developing</p>
                             <p>You'll find all of them on our {"  "}
-                                <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+                                <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank" rel="noreferrer">
                                     YouTube
                                 </a>{" "}and{" "}
                                 <a href="https://soundcloud.com/ktonal" target="_blank" rel="noreferrer">
