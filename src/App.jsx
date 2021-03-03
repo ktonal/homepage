@@ -76,7 +76,7 @@ function App() {
                 <header id={"top"}>
                     <div id={"logo"}>
                         <a href={"#landing"}><img src={window.location.origin + "/k-circle-bw.png"} id="k-logo"
-                             alt="logo"/></a>
+                                                  alt="logo"/></a>
                         <h3>T O N A L</h3>
                     </div>
                     <div id={"navbar"}>
@@ -164,7 +164,8 @@ function App() {
                             <p>Listen to our latest sound studies made with the
                                 code we are developing</p>
                             <p>You'll find all of them on our {"  "}
-                                <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank" rel="noreferrer">
+                                <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank"
+                                   rel="noreferrer">
                                     YouTube
                                 </a>{" "}and{" "}
                                 <a href="https://soundcloud.com/ktonal" target="_blank" rel="noreferrer">
@@ -215,8 +216,11 @@ function App() {
                                     <p><code>mimikit</code> is an open-source python package for audio and music data
                                         modeling with neural networks.</p>
 
-                                    <p>It contains models out-of-the-box and simple utilities for dealing with audio data.</p>
-                                    <p>The aim of mimikit is double : it will lower the barrier to deep-learning for non-developers while providing tools to developers that enable fast experimentation.</p>
+                                    <p>It contains models out-of-the-box and simple utilities for dealing with audio
+                                        data.</p>
+                                    <p>The aim of mimikit is double : it will lower the barrier to deep-learning for
+                                        non-developers while providing tools to developers that enable fast
+                                        experimentation.</p>
                                 </div>
                                 <div className={"sample"}>
                                     <CodeBlock
@@ -239,10 +243,12 @@ function App() {
                             <div className={"project"}>
                                 <div className={"description"}>
                                     <h3>Audio Experiment Explorer</h3>
-                                    <p><code>aXX</code> is small web application to explore the outputs of audio generative models made with mimikit and stored in neptune.ai.</p>
+                                    <p><code>aXX</code> is small web application to explore the outputs of audio
+                                        generative models made with mimikit and stored in neptune.ai.</p>
                                 </div>
                                 <div className={"sample"}>
-                                    <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} alt={""}/>
+                                    <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"}
+                                         alt={""}/>
                                 </div>
                             </div>
                         </Content>
@@ -250,11 +256,12 @@ function App() {
                 />
                 <footer className={"footer stripe negative"}>
                     <div id={"ktonal-footer"}>
-                        <p>K T O N A L </p>
+                        <p>ktonalberlin[AT]gmail.com</p>
                     </div>
                     <div className={"icon-div"}>
                         <div className={"icons"}>
-                            <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank" rel="noreferrer">
+                            <a href="https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw" target="_blank"
+                               rel="noreferrer">
                                 <IconContext.Provider value={{size: 40, color: '#CCC'}}>
                                     <FaYoutube/>
                                 </IconContext.Provider>
