@@ -7,7 +7,6 @@ import ReactMarkdown from "react-markdown";
 class CodeHighlighter extends PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
-    language: PropTypes.string
   };
 
   static defaultProps = {
@@ -15,7 +14,7 @@ class CodeHighlighter extends PureComponent {
   };
 
   render() {
-    const { language, value } = this.props;
+    const { value } = this.props;
     return (
       <SyntaxHighlighter language={"python"} style={coy}>
         {value}

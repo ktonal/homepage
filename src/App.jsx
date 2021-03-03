@@ -59,7 +59,7 @@ function App() {
     return (
         <>
             <div id={"landing"}>
-                <img src={window.location.origin + "/btv-landing.png"} id={"btv-landing"}/>
+                <img src={window.location.origin + "/btv-landing.png"} id={"btv-landing"} alt={"background"}/>
                 <div id={"landing-area"}>
                     <div id={"ktonal-landing"}>
                         <img src={window.location.origin + "/k-circle-bw.png"}
@@ -72,7 +72,7 @@ function App() {
             </div>
 
             <div id="main">
-                <img src={window.location.origin + "/btv-landing.png"} id={"btv-background"}/>
+                <img src={window.location.origin + "/btv-landing.png"} id={"btv-background"} alt={"background"}/>
                 <header id={"top"}>
                     <div id={"logo"}>
                         <a href={"#landing"}><img src={window.location.origin + "/k-circle-bw.png"} id="k-logo"
@@ -243,7 +243,7 @@ function App() {
                                     <p>Visit a <a href={"https://ktonal.github.io/axx"}>live demo</a> containing experiments we made.</p>
                                 </div>
                                 <div className={"sample"}>
-                                    <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} />
+                                    <img id={"axx-screenshot"} src={window.location.origin + "/axx-screenshot.png"} alt={""}/>
                                 </div>
                             </div>
                         </Content>
