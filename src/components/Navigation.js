@@ -1,19 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  IconButton,
-  Hidden,
-  Container,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import { Logo } from "./K";
+import { AppBar, Toolbar, Box, Container } from "@material-ui/core";
+import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-scroll";
 
 export function Nav() {
-  const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,7 +12,6 @@ export function Nav() {
     });
   }, []);
   const linkProps = { smooth: true, offset: -110 };
-
   return (
     <AppBar
       position={"sticky"}
@@ -59,8 +49,7 @@ export function Nav() {
   );
 }
 
-export function Footer(props) {
-  const [open, setOpen] = useState(false);
+export function Footer() {
   return (
     <AppBar position="static" color={"white"} className="footer">
       <Container>

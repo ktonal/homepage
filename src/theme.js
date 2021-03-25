@@ -4,7 +4,7 @@ export default createMuiTheme({
   shadows: ["none"],
   palette: {
     primary: {
-      main: "rgb(0,255,0)",
+      main: "#1c1c1cf7",
     },
     secondary: {
       light: "#0066ff",
@@ -21,6 +21,14 @@ export default createMuiTheme({
     MuiCssBaseline: {
       "@global": {
         "@font-face": "Courier",
+      },
+    },
+    MuiTypography: {
+      h1: {
+        fontSize: "4.5rem",
+      },
+      p: {
+        fontSize: "5rem",
       },
     },
   },
