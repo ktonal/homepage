@@ -1,108 +1,118 @@
+/*core ui*/
 body,
 html {
   margin: 0px;
   padding: 0px;
   min-height: 100vh;
   height: 100%;
-  font-family: Courier, monospace !important;
-  background: white !important;
 }
 a {
   color: inherit;
   text-decoration: underline;
 }
+main {
+  position: relative;
+  z-index: 1;
+}
+.MuiContainer-root {
+  padding: 0px 5% !important;
+}
+.MuiToolbar-root {
+  padding: 0px !important;
+}
+section {
+  padding: 60px 0px;
+  position: relative;
+}
+/* section.i .MuiTypography-root {
+  color: white !important;
+} */
+pre {
+  background: #f1f1f1;
+}
+.sticky-inner-wrapper {
+  z-index: 999;
+}
+/*/core ui*/
+
+/*navigation*/
+.nav a {
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-link {
+  margin-left: 32px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.footer {
+  padding: 40px 0px;
+}
+.social-nav {
+  padding: 15px 0px;
+}
+.social-nav .social svg {
+  font-size: 20px;
+  margin-left: 15px;
+}
+.footer .social svg {
+  font-size: 30px;
+  margin-left: 15px;
+}
+/*/navigation*/
+
+/*components*/
 .bg {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  z-index: 0;
-}
-main {
-  position: relative;
-  z-index: 1;
-}
-/* .MuiContainer-root {
-  max-width: 90% !important;
-} */
-.MuiToolbar-root {
-  padding: 0px !important;
-}
-section {
-  padding: 100px 0px;
-}
-section.i,
-pre {
-  background: #1c1c1cf7 !important;
-}
-/* section#deal {
-  background: #1c1c1cf7 !important;
-} */
-section.i .MuiTypography-root {
-  color: white !important;
-}
-.logo-text {
-  font-size: 68px;
-  vertical-align: middle;
-  line-height: 1px;
-  font-weight: 400;
-  font-family: Rockwell !important;
-  position: relative;
-  top: 7px;
-  left: 5px;
+  z-index: -1;
+  opacity: 0.4;
 }
 .logo {
-  display: inline-block;
-  width: 90px;
-  height: 90px;
-  text-align: center;
-  line-height: 84px;
-  border-radius: 50%;
   font-family: Rockwell !important;
   font-weight: 800;
-  font-size: 40px;
-  display: inline-block;
+  font-size: 45px;
+  line-height: 60px;
+  height: 60px;
   vertical-align: middle;
-  border: 5px solid;
-  /* background: rgba(255, 255, 255, 0.7); */
+  text-decoration: none;
+}
+.logo-text {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  font-family: Roboto mono !important;
+  vertical-align: middle;
+  text-transform: uppercase;
+  position: relative;
+  top: -5px;
+  left: -5px;
+  letter-spacing: 7px;
+  text-decoration: none;
 }
 .logo span:nth-child(2) {
   position: relative;
   left: -6px;
 }
+.Typist {
+  display: inline;
+}
+/*/components*/
 
-.nav .logo {
-  transform: scale(0.7);
-  opacity: 0;
+/*embeds*/
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
 }
-.footer .logo,
-.footer .logo-text {
-  transform: scale(0.7);
-}
-.nav.scrolled .logo {
-  opacity: 1;
-}
-.nav {
-  padding: 15px 0px;
-  transition: all ease 0.2s !important;
-}
-.nav a {
-  margin-left: 32px;
-  font-size: 20px;
-  cursor: pointer;
-  text-decoration: none;
-}
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.footer {
-  padding: 40px 0px;
-}
-.footer svg {
-  font-size: 40px;
-  margin-left: 15px;
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .lty-playbtn {
   background: #ffffff24 !important;
@@ -120,7 +130,7 @@ section.i .MuiTypography-root {
 }
 .yt-lite::before {
   background: #00000080 !important;
-  opacity: 0.5;
+  opacity: 0.2;
   height: 100% !important;
 }
 .yt-lite:hover::before {
@@ -132,7 +142,4 @@ section.i .MuiTypography-root {
 .yt-lite.lyt-activated:hover .lty-playbtn {
   opacity: 0 !important;
 }
-
-.Typist {
-  display: inline;
-}
+/*/embeds*/

@@ -2,21 +2,24 @@ import React from "react";
 import "../css/Glitch.css";
 import bg from "../images/bg.png";
 
-export default function Bg() {
-  const glitchitem_style = {
+export default function Bg({ glitch }) {
+  const bgStyle = {
     background: "url(" + bg + ")no-repeat",
     backgroundSize: "contain",
-    backgroundPosition: "-28vw 50%",
+    // backgroundPosition: "-28vw 50%",s
+    backgroundPosition: "0% 50%",
   };
   return (
-    <div className="bg">
-      <div class="glitch">
-        <div class="glitch__item" style={glitchitem_style}></div>
-        <div class="glitch__item" style={glitchitem_style}></div>
-        <div class="glitch__item" style={glitchitem_style}></div>
-        <div class="glitch__item" style={glitchitem_style}></div>
-        <div class="glitch__item" style={glitchitem_style}></div>
-      </div>
+    <div className="bg" style={!glitch && bgStyle}>
+      {glitch && (
+        <div class="glitch">
+          <div class="glitch__item" style={bgStyle}></div>
+          <div class="glitch__item" style={bgStyle}></div>
+          <div class="glitch__item" style={bgStyle}></div>
+          <div class="glitch__item" style={bgStyle}></div>
+          <div class="glitch__item" style={bgStyle}></div>
+        </div>
+      )}
     </div>
   );
 }
