@@ -9,6 +9,7 @@ html {
 a {
   color: inherit;
   text-decoration: underline;
+  cursor: pointer;
 }
 main {
   position: relative;
@@ -33,13 +34,14 @@ pre {
 /*/core ui*/
 
 /*navigation*/
-.nav a {
-  font-size: 20px;
+.nav a,
+.footer a {
   cursor: pointer;
   text-decoration: none;
 }
 .nav-link {
   margin-left: 32px;
+  font-size: 20px;
 }
 .nav-link:hover {
   text-decoration: underline;
@@ -87,7 +89,6 @@ pre {
   text-transform: uppercase;
   position: relative;
   top: -5px;
-  left: -5px;
   letter-spacing: 7px;
   text-decoration: none;
 }

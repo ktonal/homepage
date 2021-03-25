@@ -5,18 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-scroll";
 import Sticky from "react-stickynode";
 
+const navHeight = 90;
+
+const linkProps = {
+  smooth: true,
+  offset: -1 * navHeight,
+};
+
 export function Nav() {
-  const height = 90;
-  const linkProps = {
-    smooth: true,
-    offset: -1 * height,
-  };
   return (
     <Sticky activeClass="sticky">
       <AppBar
         position="fixed"
         className="nav"
-        style={{ height: height + "px", lineHeight: height + "px" }}
+        style={{ height: navHeight + "px", lineHeight: navHeight + "px" }}
       >
         <Container maxWidth={"lg"}>
           <Toolbar>
@@ -53,7 +55,9 @@ export function Footer() {
       <Container>
         <Toolbar>
           <Box>
-            <Logo full />
+            <Link to="#" {...linkProps}>
+              <Logo full />
+            </Link>
           </Box>
           <div style={{ flexGrow: 1 }} />
           <SocialLinks />

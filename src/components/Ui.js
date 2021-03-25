@@ -23,7 +23,7 @@ export function Section({ children, full, noP, i, ...p }) {
         style={{
           height: full ? "100%" : null,
           zIndex: 2,
-          padding: full ? "0px" : theme.spacing(4),
+          padding: full ? "0px" : theme.spacing(3),
         }}
       >
         {children}

@@ -40,7 +40,7 @@ export function Home() {
                 width: isMobile ? null : "100%",
               }}
             >
-              <Bg opacity={0.7} />
+              <Bg opacity={0.8} />
             </Grid>
             <Grid
               item
