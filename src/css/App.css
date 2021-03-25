@@ -5,6 +5,7 @@ html {
   padding: 0px;
   min-height: 100vh;
   height: 100%;
+  /* overflow-x: hidden; */
 }
 a {
   color: inherit;

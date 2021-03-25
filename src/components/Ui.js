@@ -7,6 +7,7 @@ export function Content({ children, ...p }) {
 }
 export function Section({ children, full, noP, i, ...p }) {
   const theme = useTheme();
+  const sectionPad = noP ? "0px" : theme.spacing(5);
   return (
     <section
       className={i ? "i" : ""}
@@ -14,7 +15,9 @@ export function Section({ children, full, noP, i, ...p }) {
         height: full ? "100%" : null,
         background: i ? theme.palette.primary.main : null,
         color: i ? theme.palette.primary.contrastText : null,
-        padding: noP ? "0px" : theme.spacing(5),
+        paddingTop: sectionPad,
+        paddingBottom: sectionPad,
+        overflow: "hidden",
       }}
       {...p}
     >
@@ -23,7 +26,7 @@ export function Section({ children, full, noP, i, ...p }) {
         style={{
           height: full ? "100%" : null,
           zIndex: 2,
-          padding: full ? "0px" : theme.spacing(3),
+          padding: full ? "0px" : null,
         }}
       >
         {children}

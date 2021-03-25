@@ -1,5 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, Box, Container } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Container,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-scroll";
@@ -14,11 +21,15 @@ const linkProps = {
 
 export function Nav() {
   return (
-    <Sticky activeClass="sticky">
+    <Sticky className="sticky">
       <AppBar
         position="fixed"
         className="nav"
-        style={{ height: navHeight + "px", lineHeight: navHeight + "px" }}
+        style={{
+          height: navHeight + "px",
+          lineHeight: navHeight + "px",
+          width: "100%",
+        }}
       >
         <Container maxWidth={"lg"}>
           <Toolbar>
@@ -50,13 +61,15 @@ export function Nav() {
 }
 
 export function Footer() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <AppBar position="static" color={"primary"} className="footer">
       <Container>
         <Toolbar>
           <Box>
             <Link to="#" {...linkProps}>
-              <Logo full />
+              <Logo full={!isMobile} />
             </Link>
           </Box>
           <div style={{ flexGrow: 1 }} />
@@ -67,8 +80,14 @@ export function Footer() {
   );
 }
 export function SocialNav() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
-    <AppBar position="absolute" color={"transparent"} className="social-nav">
+    <AppBar
+      position={isMobile ? "static" : "absolute"}
+      color={"transparent"}
+      className="social-nav"
+    >
       <Container>
         <Toolbar>
           <div style={{ flexGrow: 1 }} />

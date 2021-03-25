@@ -11,7 +11,7 @@ const dark = {
   base: "#fff",
   text: "#fff",
   background: "#222",
-  font: "Roboto mono",
+  font: "Ubuntu",
 };
 const light = {
   base: "#fff",
@@ -26,7 +26,7 @@ const submarine = {
   font: "Roboto mono",
 };
 
-const theme = classic;
+const theme = dark;
 
 export default createMuiTheme({
   shadows: ["none"],

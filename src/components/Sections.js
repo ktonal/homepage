@@ -2,7 +2,9 @@ import React from "react";
 import {
   Box,
   Chip,
+  Container,
   Grid,
+  Hidden,
   Typography,
   useMediaQuery,
   useTheme,
@@ -36,8 +38,8 @@ export function Home() {
               sm={6}
               style={{
                 position: "relative",
-                height: isMobile ? "400px" : "100%",
-                width: isMobile ? null : "100%",
+                height: isMobile ? "360px" : "100%",
+                width: "100%",
               }}
             >
               <Bg opacity={0.8} />
@@ -52,25 +54,29 @@ export function Home() {
                 alignItems: "center",
               }}
             >
-              <Box p={4}>
-                <Box style={{ width: "100%" }}>
-                  <Logo full />
-                </Box>
-                <Box my={3}>
-                  <Typography variant="h1">
-                    Learning machines,
-                    <br />
-                    for and by musicians.
-                  </Typography>
-                </Box>
+              <Box my={5}>
+                <Container>
+                  <Box style={{ width: "100%" }}>
+                    <Logo full />
+                  </Box>
+                  <Box my={3}>
+                    <Typography variant="h1">
+                      Learning machines,
+                      <br />
+                      for and by musicians.
+                    </Typography>
+                  </Box>
+                </Container>
               </Box>
             </Grid>
           </Grid>
         </Section>
       </Grid>
-      <Grid item style={{ height: "90px" }}>
-        <Nav />
-      </Grid>
+      <Hidden xsDown>
+        <Grid item style={{ height: "90px" }}>
+          <Nav />
+        </Grid>
+      </Hidden>
     </Grid>
   );
 }
@@ -193,7 +199,7 @@ export function Music() {
             <Typography variant="h5">
               <strong>{l.title}</strong>
             </Typography>
-            <Typography variant="body2">{l.description}</Typography>
+            {/* <Typography variant="body2">{l.description}</Typography> */}
           </Grid>
         ))}
       </Grid>
