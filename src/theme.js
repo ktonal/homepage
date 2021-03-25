@@ -1,29 +1,51 @@
 import { createMuiTheme } from "@material-ui/core";
 
-const colors = {
-  base: "rgb(0,0,0)",
-  text: "rgb(0,255,0)",
-  background: "rgb(0,0,255)",
+const theme1 = {
+  base: "#222",
+  text: "#222",
+  background: "#fff",
+  font: "Roboto mono",
 };
+
+const theme2 = {
+  base: "#fff",
+  text: "#fff",
+  background: "#222",
+  font: "Roboto mono",
+};
+const theme3 = {
+  base: "#fff",
+  text: "#333",
+  background: "#e6e6e6",
+  font: "Roboto mono",
+};
+const theme4 = {
+  base: "rgb(0,0,255)",
+  text: "rgb(0,0,255)",
+  background: "#e6e6e6",
+  font: "Roboto mono",
+};
+
+const theme = theme3;
 
 export default createMuiTheme({
   shadows: ["none"],
   spacing: 12,
   palette: {
     primary: {
-      main: colors.base,
+      main: theme.base,
     },
     text: {
-      primary: colors.text,
+      primary: theme.text,
     },
     background: {
-      default: colors.background,
+      default: theme.background,
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },
   typography: {
-    fontFamily: "Roboto mono",
+    fontFamily: theme.font,
   },
   overrides: {
     MuiTypography: {

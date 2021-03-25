@@ -1,15 +1,24 @@
-import React, { useState } from "react";
-import { Box, Chip, Grid, Typography } from "@material-ui/core";
+import React from "react";
+import {
+  Box,
+  Chip,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
+import { Nav, SocialNav } from "./Navigation";
 import { Section } from "./Ui";
 import Logo from "./Logo";
-import Type from "./Type";
 import _Code from "./Code";
 import Embed from "./Embed";
 import musicLinks from "../music-links";
-import { Nav, SocialNav } from "./Navigation";
+
 import Bg from "./Bg";
 
 export function Home() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Grid
       container
@@ -18,10 +27,68 @@ export function Home() {
       style={{ height: "100vh" }}
     >
       <SocialNav />
+      <Grid item style={{ flexGrow: 1 }}>
+        <Section id="#" full noP>
+          <Grid container alignItems="center" style={{ height: "100%" }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{
+                position: "relative",
+                height: isMobile ? "400px" : "100%",
+                width: isMobile ? null : "100%",
+              }}
+            >
+              <Bg opacity={0.7} />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Box p={4}>
+                <Box style={{ width: "100%" }}>
+                  <Logo full />
+                </Box>
+                <Box my={3}>
+                  <Typography variant="h1">
+                    Learning machines,
+                    <br />
+                    for and by musicians.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Section>
+      </Grid>
+      <Grid item style={{ height: "90px" }}>
+        <Nav />
+      </Grid>
+    </Grid>
+  );
+}
 
+export function Home2() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
+  return (
+    <Grid
+      container
+      direction="column"
+      justify="space-between"
+      style={{ height: isMobile ? null : "100vh", position: "relative" }}
+    >
+      <Bg full opacity={0.7} />
+      <SocialNav />
       <Grid item style={{ flexGrow: 1 }}>
         <Section id="#" full>
-          <Bg />
           <Grid container alignItems="flex-end" style={{ height: "100%" }}>
             <Grid item xs={12} sm={6}></Grid>
             <Grid item xs={12} sm={6}>
@@ -33,21 +100,6 @@ export function Home() {
                   for and by musicians.
                 </Typography>
               </Box>
-              {/* <Typography variant="h1" style={{ marginTop: "20px" }}>
-                <Type
-                  text={"Learning machines,"}
-                  interval={3000}
-                  loop={[
-                    {
-                      text: "by musicians.",
-                    },
-                    {
-                      text: "for musicians.",
-                    },
-                  ]}
-                  wrap="div"
-                />
-              </Typography> */}
             </Grid>
           </Grid>
         </Section>
@@ -62,7 +114,6 @@ export function Home() {
 export function WhatTheK() {
   const gridItem = {
     xs: 12,
-
     md: 4,
   };
   return (
@@ -116,27 +167,6 @@ export function WhatTheK() {
           </Typography>
         </Grid>
       </Grid>
-      {/* <Box m={3}>
-        <Typography variant="h2" component="p">
-          <Type
-              interval={3000}
-              loop={[
-                {
-                  text: "code",
-                },
-                {
-                  text: "research",
-                },
-                {
-                  text: "composition",
-                },
-                {
-                  text: "sound design",
-                },
-              ]}
-            />
-        </Typography>
-      </Box> */}
     </Section>
   );
 }
