@@ -1,32 +1,32 @@
 import { createMuiTheme } from "@material-ui/core";
 
-const theme1 = {
+const classic = {
   base: "#222",
   text: "#222",
   background: "#fff",
   font: "Roboto mono",
 };
 
-const theme2 = {
+const dark = {
   base: "#fff",
   text: "#fff",
   background: "#222",
   font: "Roboto mono",
 };
-const theme3 = {
+const light = {
   base: "#fff",
   text: "#333",
   background: "#e6e6e6",
   font: "Roboto mono",
 };
-const theme4 = {
+const submarine = {
   base: "rgb(0,0,255)",
   text: "rgb(0,0,255)",
   background: "#e6e6e6",
   font: "Roboto mono",
 };
 
-const theme = theme3;
+const theme = dark;
 
 export default createMuiTheme({
   shadows: ["none"],
