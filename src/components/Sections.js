@@ -186,14 +186,21 @@ export function Music() {
         capabilities of the code we are developing.
       </Typography>
       <Typography variant="body1">
-        You'll find all of them on our <a>Youtube</a> and <a>Soundcloud</a>{" "}
+        You'll find all of them on our{" "}
+        <a href="/youtube.com" target="_blank" rel="noreferrer">
+          Youtube
+        </a>{" "}
+        and{" "}
+        <a href="/youtube.com" target="_blank" rel="noreferrer">
+          Soundcloud
+        </a>{" "}
         channels.
       </Typography>
       <br />
       <br />
       <Grid container spacing={5}>
         {musicLinks.map((l) => (
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} key={l.url}>
             <Embed {...l} />
             <br />
             <Typography variant="h5">
@@ -217,7 +224,7 @@ export function Code() {
       </Typography>
       <Typography variant="body1">
         You'll find them on our{" "}
-        <a href="/" target="_blank">
+        <a href="/github.com" target="_blank" rel="noreferrer">
           Github
         </a>
         .

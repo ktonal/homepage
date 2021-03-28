@@ -30,6 +30,7 @@ export function Nav() {
           lineHeight: navHeight + "px",
           width: "100%",
         }}
+        elevation={0}
       >
         <Container maxWidth={"lg"}>
           <Toolbar>
@@ -64,7 +65,12 @@ export function Footer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
-    <AppBar position="static" color={"primary"} className="footer">
+    <AppBar
+      position="static"
+      color={"primary"}
+      className="footer"
+      elevation={0}
+    >
       <Container>
         <Toolbar>
           <Box>
@@ -87,6 +93,7 @@ export function SocialNav() {
       position={isMobile ? "static" : "absolute"}
       color={"transparent"}
       className="social-nav"
+      elevation={0}
     >
       <Container>
         <Toolbar>
@@ -107,16 +114,16 @@ function SocialLinks(props) {
   };
   return (
     <div className="social">
-      <a href={links.fb} target="_blank">
+      <a href={links.fb} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={["fab", "facebook-f"]} />
       </a>
-      <a href={links.sc} target="_blank">
+      <a href={links.sc} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={["fab", "soundcloud"]} />
       </a>
-      <a href={links.yt} target="_blank">
+      <a href={links.yt} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={["fab", "youtube"]} />
       </a>
-      <a href={links.gh} target="_blank">
+      <a href={links.gh} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={["fab", "github"]} />
       </a>
     </div>

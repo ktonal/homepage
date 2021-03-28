@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 
 export function Content({ children, ...p }) {

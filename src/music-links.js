@@ -1,4 +1,4 @@
-export default [
+const musicLinks = [
   {
     url: "https://www.youtube.com/watch?v=LQUuQAwIs9M",
     title: "AI can't stop laughing",
@@ -51,3 +51,4 @@ export default [
     description: "",
   },
 ];
+export default musicLinks;
