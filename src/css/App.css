@@ -72,24 +72,21 @@ pre {
   height: 100%;
   /* z-index: -1; */
 }
+#k-img {
+  height: 5em;
+  margin: auto 7px;
+}
 .logo {
-  font-family: Rockwell !important;
-  font-weight: 800;
-  font-size: 45px;
-  line-height: 60px;
-  height: 60px;
-  vertical-align: middle;
+  align-items: center;
+  display: flex;
   text-decoration: none;
 }
 .logo-text {
   font-size: 48px;
-  line-height: 60px;
   font-weight: 400;
-  font-family: Roboto mono !important;
-  vertical-align: middle;
+  font-family: Ubuntu !important;
   text-transform: uppercase;
   position: relative;
-  top: -5px;
   letter-spacing: 7px;
   text-decoration: none;
 }

@@ -35,7 +35,7 @@ export function Nav() {
         <Container maxWidth={"lg"}>
           <Toolbar>
             <Link to="#" {...linkProps}>
-              <Logo />
+              <Logo img={true}/>
             </Link>
             <div style={{ flexGrow: 1 }} />
             {/* <Hidden mdUp>
@@ -75,7 +75,7 @@ export function Footer() {
         <Toolbar>
           <Box>
             <Link to="#" {...linkProps}>
-              <Logo full={!isMobile} />
+              <Logo img={true} full={!isMobile} />
             </Link>
           </Box>
           <div style={{ flexGrow: 1 }} />

@@ -57,7 +57,7 @@ export function Home() {
                             <Box my={5}>
                                 <Container>
                                     <Box style={{width: "100%"}}>
-                                        <Logo full/>
+                                        <Logo img={true} full={true}/>
                                     </Box>
                                     <Box my={3}>
                                         <Typography variant="h1">
@@ -125,7 +125,7 @@ export function WhatTheK() {
     return (
         <Section id={"what-the-k"}>
             <Typography variant="h2">
-                What the <Logo/>?
+                What the K?
             </Typography>
             <br/>
             <Grid container spacing={5}>
@@ -141,7 +141,7 @@ export function WhatTheK() {
                     </Typography>
                 </Grid>
                 <Grid item {...gridItem}>
-                    <Typography variant="h4">What'0's our deal?</Typography>
+                    <Typography variant="h4">What's our deal?</Typography>
                     <Typography variant="body1">
                         We combine a developer's perspective with the interests of the
                         modern composer.
