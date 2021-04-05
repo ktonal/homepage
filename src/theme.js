@@ -7,26 +7,26 @@ const classic = {
   font: "Ubuntu",
 };
 
-const dark = {
-  base: "#fff",
-  text: "#fff",
-  background: "#222",
-  font: "Roboto mono",
-};
-const light = {
-  base: "#fff",
-  text: "#333",
-  background: "#e6e6e6",
-  font: "Roboto mono",
-};
-const submarine = {
-  base: "rgb(0,0,255)",
-  text: "rgb(0,0,255)",
-  background: "#e6e6e6",
-  font: "Roboto mono",
-};
+// const dark = {
+//   base: "#fff",
+//   text: "#fff",
+//   background: "#222",
+//   font: "Roboto mono",
+// };
+// const light = {
+//   base: "#fff",
+//   text: "#333",
+//   background: "#e6e6e6",
+//   font: "Roboto mono",
+// };
+// const submarine = {
+//   base: "rgb(0,0,255)",
+//   text: "rgb(0,0,255)",
+//   background: "#e6e6e6",
+//   font: "Roboto mono",
+// };
 
-const theme = light;
+const theme = classic;
 
 export default createMuiTheme({
   shadows: ["none"],
