@@ -107,16 +107,12 @@ export function SocialNav() {
 
 function SocialLinks(props) {
   const links = {
-    fb: "facebook.com",
-    sc: "soundcloud.com",
-    yt: "youtube.com",
-    gh: "github.com",
+    sc: "https://soundcloud.com/ktonal",
+    yt: "https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw",
+    gh: "https://github.com/ktonal",
   };
   return (
     <div className="social">
-      <a href={links.fb} target="_blank" rel="noreferrer">
-        <FontAwesomeIcon icon={["fab", "facebook-f"]} />
-      </a>
       <a href={links.sc} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={["fab", "soundcloud"]} />
       </a>
