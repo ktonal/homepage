@@ -12,7 +12,7 @@ import {
 import {Nav, SocialNav} from "./Navigation";
 import {Section} from "./Ui";
 import Logo from "./Logo";
-import _Code from "./Code";
+import CodeBlock from "./CodeBlock";
 import Embed from "./Embed";
 import musicLinks from "../music-links";
 
@@ -251,7 +251,7 @@ export function Code() {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
-                        <_Code
+                        <CodeBlock
                             code={`
  from mimikit.freqnet import FreqNet
  
@@ -278,6 +278,7 @@ export function Code() {
                             id={"axx-screenshot"}
                             src={window.location.origin + "/axx-screenshot.png"}
                             style={{width: "100%"}}
+                            alt={""}
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
