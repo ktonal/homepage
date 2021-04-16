@@ -26,7 +26,7 @@ export function Home() {
             container
             direction="column"
             justify="space-between"
-            style={{height: "100vh"}}
+            style={isMobile ? {} : {height: "100vh"}}
         >
             <SocialNav/>
             <Grid item style={{flexGrow: 1}}>
