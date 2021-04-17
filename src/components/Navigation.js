@@ -73,6 +73,16 @@ export function Footer() {
             elevation={0}
         >
             <Container>
+                <Container style={{width: "max-content", margin: "0 auto 20px auto"}}>
+                    <Typography variant={"alignCenter"} style={{justifyContent: "center"}}>
+                        ktonalberlin
+                    </Typography>
+                    <FontAwesomeIcon icon={"at"}/>
+                    <Typography variant={"alignCenter"} style={{justifyContent: "center"}}>
+                        gmail.com
+                    </Typography>
+                </Container>
+                <div style={{flexGrow: 1}}/>
                 <Toolbar>
                     <Box>
                         <Link to="#" {...linkProps}>
@@ -80,12 +90,7 @@ export function Footer() {
                         </Link>
                     </Box>
                     <div style={{flexGrow: 1}}/>
-                    <div >
-                        <Typography variant={"alignCenter"}>
-                            {"ktonalberlin[AT]gmail.com"}
-                        </Typography>
-                    </div>
-                    <div style={{flexGrow: 1}}/>
+
                     <SocialLinks/>
                 </Toolbar>
             </Container>
