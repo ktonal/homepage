@@ -78,6 +78,10 @@ export default createMuiTheme({
         fontSize: ".9rem",
         opacity: 0.8,
       },
+      alignCenter: {
+        fontSize: "1.3rem",
+        fontWeight: "bold",
+      }
     },
     MuiChip: {
       root: {
