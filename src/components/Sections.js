@@ -1,14 +1,5 @@
 import React from "react";
-import {
-    Box,
-    Chip,
-    Container,
-    Grid,
-    Hidden,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from "@material-ui/core";
+import {Box, Chip, Container, Grid, Hidden, Typography, useMediaQuery, useTheme,} from "@material-ui/core";
 import {Nav, SocialNav} from "./Navigation";
 import {Section} from "./Ui";
 import Logo from "./Logo";
@@ -204,7 +195,10 @@ export function Music() {
                         <Embed {...l} />
                         <br/>
                         <Typography variant="h5">
-                            <strong>{l.title}</strong>
+                            <strong>
+                                <a href={l.url} target="_blank" rel="noreferrer">
+                                    {l.title}</a>
+                            </strong>
                         </Typography>
                         {/* <Typography variant="body2">{l.description}</Typography> */}
                     </Grid>
@@ -237,7 +231,11 @@ export function Code() {
                         </Typography>
                         <br/>
                         <Typography variant="body1">
-                            <strong>mimikit</strong> is an open-source python package for audio and music data
+                            <strong>
+                                <a href={"https://github.com/ktonal/mimikit"} target="_blank" rel="noreferrer">
+                                    mimikit
+                                </a>
+                            </strong> is an open-source python package for audio and music data
                             modeling with neural networks.
                         </Typography>
                         <Typography variant="body1">
@@ -286,7 +284,11 @@ export function Code() {
                             <Chip label={"axx"}/> - Audio Experiment Explorer
                         </Typography>
                         <Typography variant="body1">
-                            <strong>axx</strong> is a small web application to explore the outputs of audio
+                            <strong>
+                                <a href={"https://github.com/ktonal/axx"} target="_blank" rel="noreferrer">
+                                    axx
+                                </a>
+                            </strong> is a small web application to explore the outputs of audio
                             generative models made with mimikit.
                         </Typography>
                     </Grid>
