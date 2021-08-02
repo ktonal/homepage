@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Chip, Container, Grid, Hidden, Typography, useMediaQuery, useTheme,} from "@material-ui/core";
+import {Box, Chip, Container, Grid, Hidden, Typography, useMediaQuery, useTheme, Tabs, Tab} from "@material-ui/core";
 import {Nav, SocialNav} from "./Navigation";
 import {Section} from "./Ui";
 import Logo from "./Logo";
@@ -168,7 +168,39 @@ export function WhatTheK() {
     );
 }
 
+function TabPanel(props) {
+    const {children, value, index, ...other} = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
 export function Music() {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     return (
         <Section i id={"music"}>
             <Typography variant="h2">Music</Typography>
@@ -187,23 +219,43 @@ export function Music() {
                 </a>{" "}
                 channels.
             </Typography>
+            <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+                <Tab label={"Le Mystere des voix neuronales"} {...a11yProps(0)}/>
+                <Tab label={"Etudes"} {...a11yProps(1)}/>
+                <Tab label={"More about our music about"} {...a11yProps(2)}/>
+
+            </Tabs>
             <br/>
             <br/>
-            <Grid container spacing={5}>
-                {musicLinks.map((l) => (
-                    <Grid item xs={12} sm={6} md={4} key={l.url}>
-                        <Embed {...l} />
-                        <br/>
-                        <Typography variant="h5">
-                            <strong>
-                                <a href={l.url} target="_blank" rel="noreferrer">
-                                    {l.title}</a>
-                            </strong>
-                        </Typography>
-                        {/* <Typography variant="body2">{l.description}</Typography> */}
-                    </Grid>
-                ))}
-            </Grid>
+            <TabPanel value={value} index={0}>
+                <Embed url={"https://www.youtube.com/watch?v=t2dAsxSN9iU"} title={"Le Mystère des Voix Neuronales"}
+                       />
+               <Typography variant={"body1"}>
+                   “Le Mysteres des Voix neuronales” is a collectively composed audiovisual fixed-media piece by ktonal, which explores the expressive power and diversity of iconic human voices and images of individuals transformed by generative neural networks.
+               </Typography>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+                <Grid container spacing={5}>
+                    {musicLinks.map((l) => (
+                        <Grid item xs={12} sm={6} md={4} key={l.url}>
+                            <Embed {...l} />
+                            <br/>
+                            <Typography variant="h5">
+                                <strong>
+                                    <a href={l.url} target="_blank" rel="noreferrer">
+                                        {l.title}</a>
+                                </strong>
+                            </Typography>
+                            {/* <Typography variant="body2">{l.description}</Typography> */}
+                        </Grid>
+                    ))}
+                </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <Typography variant={"body1"}>
+                    KTONAL's music is just 'THE' best.
+                </Typography>
+            </TabPanel>
         </Section>
     );
 }

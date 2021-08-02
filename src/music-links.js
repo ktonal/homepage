@@ -1,10 +1,4 @@
 const musicLinks = [
-    {
-        url: "https://www.youtube.com/watch?v=t2dAsxSN9iU",
-        title: "Le Mystère des Voix Neuronales",
-        description:
-            "“Le Mysteres des Voix neuronales” is a collectively composed audiovisual fixed-media piece by ktonal, which explores the expressive power and diversity of iconic human voices and images of individuals transformed by generative neural networks.",
-    },
 
     {
         url: "https://www.youtube.com/watch?v=LQUuQAwIs9M",
