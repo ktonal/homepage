@@ -7,7 +7,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { Footer } from "./components/Navigation";
 import { Content } from "./components/Ui";
-import { Home, WhatTheK, Music, Code } from "./components/Sections";
+import { Home, WhatTheK, Music, Code, Community } from "./components/Sections";
 
 library.add(fab);
 library.add(fas);
@@ -24,6 +24,7 @@ function App() {
         <WhatTheK />
         <Music />
         <Code />
+        <Community />
         <Footer />
       </Content>
     </ThemeProvider>

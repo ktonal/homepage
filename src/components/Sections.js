@@ -297,3 +297,34 @@ export function Code() {
         </Section>
     );
 }
+
+export function Community() {
+    return (
+        <Section i id={"community"}>
+            <Typography variant="h2">Community</Typography>
+
+            <Typography variant="body1">
+                Since 2022, KTONAL organizes and moderates AI Audio Workshops in the ACUD Club Room of
+                the <a href={"https://www.berlinschoolofsound.com/"} target="_blank" rel="noreferrer">Berlin School of
+                Sound</a>.
+            </Typography>
+            <Typography variant="body1">
+                If you're interested, you are welcome to
+            </Typography>
+            <div style={{margin: "auto", width: "max-content"}}>
+                <Typography variant="h5" style={{margin: "auto", width: "max-content"}}>
+                    <a href={"http://eepurl.com/idmCG5"} target="_blank" rel="noreferrer">subscribe to our workshop
+                        newsletter</a>
+                </Typography>
+                <br/>
+                <Typography variant="h5" style={{margin: "auto", width: "max-content"}}>
+                    <a href={"https://discord.gg/9FMz2CHE48"} target="_blank" rel="noreferrer">join our discord
+                        server</a></Typography>
+            </div>
+            <br/>
+            {/*<Typography variant="body1">*/}
+            {/*    We are currently planning the next workshop <strong>for the beginning of March 2023</strong>.*/}
+            {/*</Typography>*/}
+        </Section>
+    );
+}

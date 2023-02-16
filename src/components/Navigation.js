@@ -54,6 +54,9 @@ export function Nav() {
                         <Link to="code" className="nav-link" {...linkProps}>
                             code
                         </Link>
+                        <Link to="community" className="nav-link" {...linkProps}>
+                            community
+                        </Link>
                         {/* </Hidden> */}
                     </Toolbar>
                 </Container>
@@ -123,6 +126,7 @@ function SocialLinks(props) {
         sc: "https://soundcloud.com/ktonal",
         yt: "https://www.youtube.com/channel/UC_mWCpFGG9xRDbYZMTdwHKw",
         gh: "https://github.com/ktonal",
+        dc: "https://discord.gg/9FMz2CHE48"  // <--- invite never expires
     };
     return (
         <div className="social">
@@ -134,6 +138,9 @@ function SocialLinks(props) {
             </a>
             <a href={links.gh} target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={["fab", "github"]}/>
+            </a>
+            <a href={links.dc} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={["fab", "discord"]}/>
             </a>
         </div>
     );
